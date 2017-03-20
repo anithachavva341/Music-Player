@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:id="@+id/row"
+    card_view:cardCornerRadius="4dp"
+    android:background="#fff">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/songimage"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"/>
+
+        <RelativeLayout
+            android:id="@+id/songtext"
+            android:layout_toRightOf="@+id/songimage"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+
+            <TextView
+                android:id="@+id/songname"
+                android:layout_width="wrap_content"
+                android:maxWidth="160dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:textStyle="bold"
+                android:textSize="19sp"
+                android:text="SongName" />
+
+            <TextView
+                android:id="@+id/songartists"
+                android:layout_below="@+id/songname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="160dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="5dp"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:text="Song Artists" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/songplay"
+            android:src="@drawable/play"
+            android:layout_marginRight="10dp"
+            android:layout_width="35dp"
+            android:layout_marginTop="5dp"
+            android:layout_height="35dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+
+        <ImageView
+            android:id="@+id/songdownload"
+            android:src="@drawable/download"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/songplay"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

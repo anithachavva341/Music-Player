@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:background="#009688"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.codeitnow.edfora_cokestudio.MainActivity">
+    <include layout="@layout/toolbar"/>
+    <RelativeLayout
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.github.rahatarmanahmed.cpv.CircularProgressView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/progress_view"
+            app:cpv_color="#fff"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="55dp"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            app:cpv_animAutostart="true"
+            app:cpv_indeterminate="true" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/songlist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/empty"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:text="Empty List"
+                android:textSize="20dp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

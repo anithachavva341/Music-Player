@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#009688"
+    android:id="@+id/llay"
+    android:orientation="vertical"
+    tools:context="com.codeitnow.edfora_cokestudio.PlaySong">
+    <include layout="@layout/toolbar"/>
+
+    <info.abdolahi.CircularMusicProgressBar
+        android:id="@+id/album_art"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/maron5"
+        app:border_color="#00796B"
+        app:border_width="2dp"
+        app:centercircle_diammterer=".97"
+        app:progress_color="#80CBC4"
+        app:progress_startAngle="40" />
+
+
+    <TextView
+        android:id="@+id/songname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Song Name"
+        android:textColor="@android:color/primary_text_dark"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/songartists"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Song Artist"
+        android:textColor="@android:color/primary_text_dark"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="0dp">
+
+        <ImageButton
+            android:id="@+id/pre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:background="@null"
+            android:src="@drawable/ic_fast_rewind_black_24dp" />
+
+        <ImageButton
+            android:id="@+id/play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_play_circle_normal" />
+
+        <ImageButton
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@null"
+            android:src="@drawable/ic_fast_forward_black_24dp" />
+    </LinearLayout>
+
+</LinearLayout>
